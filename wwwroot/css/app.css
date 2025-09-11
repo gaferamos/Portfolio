@@ -4,7 +4,7 @@ body {
 }
 
 body {
-    background-image: url('images/pixobg.jpg');
+    background-image: url('/Portfolio/images/pixobg.jpg');
     background-size: cover;
     /* cobre toda a tela */
     background-position: center;
