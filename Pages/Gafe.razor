@@ -1,0 +1,85 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+
+<div class="generalinfo">
+    <div class="presentation">
+        <p>
+            <button class="btn btn-dark btnpresentatio" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#gafeinfo" aria-expanded="false" aria-controls="collapseWidthExample">
+                Me conheça brevemente
+            </button>
+        </p>
+        <div style="min-height: 120px;">
+            <div class="collapse collapse-horizontal" id="gafeinfo">
+                <div class="card card-body card-info card_colapse" style="width: 350px;">
+                    Olá, sou o Gabriel. Sou estudante de Ciências da Computação. Aqui te apresento um pouco sobre mim e
+                    meus
+                    projetos
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="div-a">
+        <img src="images/asdaf.jpg" alt="imaage of me" class="imageofme">
+    </div>
+
+    <div class="div-a">
+        <a href="https://github.com/gaferamos" target="_blank" class="btn btn-outline-dark">
+            Github
+        </a>
+
+        <a href="https://www.linkedin.com/in/gabriel-felipe-bb21712a7" target="_blank" class="btn btn-outline-dark">
+            Linkedin
+        </a>
+
+    </div>
+    <a href="https://mail.google.com/mail/?view=cm&to=gafe.dev@gmail.com&body=Olá%2C%20Gabriel%20podemos%20conversar%20sobre" target="_blank" class="btn btn-outline-dark">
+        Enviar Mensagem
+    </a>
+</div>
+
+<div class="cardinfo">
+
+    <div class="card card1 " style="width: 18rem;">
+        <img src="images/studyprj.jpg" class="card-img-top" alt="...">
+        <div class="card-body card-body d-flex flex-column">
+            <h5 class="card-title">Projetos de Estudo</h5>
+
+            <p class="card-text">@ProjectCardInfo</p>
+            <a href="/studyprojects" class="btn btn-dark mt-auto">Explorar</a>
+        </div>
+    </div>
+
+    <div class="card card2" style="width: 18rem;">
+        <img src="images/personalprj.jpg" class="card-img-top" alt="...">
+        <div class="card-body card-body d-flex flex-column">
+            <h5 class="card-title">Projetos Pessoais</h5>
+
+            <p class="card-text">@Personalprjcardinfo</p>
+            <a href="/personalprojects" class="btn btn-dark mt-auto">Explorar</a>
+        </div>
+    </div>
+
+    <div class="card card3" style="width: 18rem;">
+        <img src="images/groupwrk.jpg" class="card-img-top" alt="...">
+        <div class="card-body card-body d-flex flex-column">
+            <h5 class="card-title">Projetos Em Grupo</h5>
+
+            <p class="card-text">@Groupprjrcardinfo</p>
+            <a href="/groupprojects" class="btn btn-dark mt-auto">Explorar</a>
+        </div>
+    </div>
+
+</div>
+
+@code {
+    private string ProjectCardInfo = "Projetos desenvolvidos para explorar novas técnicas e expandir conhecimentos.";
+
+    private string Personalprjcardinfo = "Projetos pessoais desenvolvidos para transformar ideias em código e compartilhá-las com o mundo.";
+
+    private string Groupprjrcardinfo = "Projetos colaborativos desenvolvidos para alcançar grandes resultados juntos.";
+}

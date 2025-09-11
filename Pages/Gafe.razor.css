@@ -1,0 +1,123 @@
+﻿@media (max-width: 768px) {
+    .cardinfo {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+        .cardinfo .card {
+            width: 100% !important;
+            /* ocupa toda a largura do container */
+            max-width: 350px;
+            /* limite pra não esticar demais */
+        }
+}
+
+.btn-outline-dark {
+    min-width: 90px;
+}
+
+.generalinfo {
+    display: flex;
+    flex-direction: column;
+    /* empilha os elementos verticalmente */
+    align-items: center;
+    /* centraliza horizontalmente */
+    justify-content: center;
+    /* centraliza verticalmente dentro do container */
+    text-align: center;
+    /* centraliza textos internos */
+    gap: 15%;
+    /* espaçamento entre os elementos */
+    margin: 1.5% auto;
+    margin-top: 40px;
+}
+
+.cardinfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+}
+
+.card-img-top {
+    height: 200px;
+    /* mesma altura para todas imagens */
+    object-fit: cover;
+    /* preenche o espaço cortando as sobras */
+}
+
+.imageofme {
+    /* gira 90 graus */
+    width: 200px;
+    /* largura (resolução na tela) */
+    height: 200px;
+    /* ajusta altura automaticamente */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card {
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.card1 {
+    background-color: rgb(185, 185, 185);
+    min-height: 400px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    /* sempre aplicar */
+}
+
+.card2 {
+    background-color: rgb(138, 68, 68);
+    min-height: 400px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    /* sempre aplicar */
+}
+
+.card3 {
+    background-color: rgb(67, 148, 151);
+    min-height: 400px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    /* sempre aplicar */
+}
+
+.presentation {
+    color: rgb(0, 0, 0);
+    justify-content: center;
+}
+
+.btnpresentatio {
+    margin-top: 0.33%;
+}
+
+
+.div-a {
+    margin: 6px;
+}
+
+.card_colapse {
+    background-color: rgba(0, 0, 0, 0.226);
+    backdrop-filter: blur(9px);
+    /* fundo translúcido */
+    color: #fff;
+    /* texto branco */
+    border: none;
+    /* tira borda se quiser */
+}
+
+.card1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}

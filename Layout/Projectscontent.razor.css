@@ -1,0 +1,48 @@
+﻿.cards-container {
+    display: flex;
+    flex-direction: column;
+    /* empilha os cards */
+    align-items: center;
+    /* centraliza horizontalmente */
+    margin: 30px auto 0 auto;
+    /* distância do topo e centraliza */
+    gap: 2px;
+    /* espaço entre os cards */
+    width: 90%;
+    max-width: 800px;
+}
+
+.expand-card {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+
+
+    .expand-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .expand-card .collapse {
+        transition: all 0.4s ease;
+        /* suaviza a expansão */
+    }
+
+.card-img-top,
+.card-img-bottom {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+    .btn:hover {
+        background-color: rgb(58, 58, 252);
+    }
