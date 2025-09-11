@@ -23,12 +23,16 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    /* Fallbacks para navegadores diferentes */
+    min-height: 100vh; /* funciona em PCs e browsers antigos */
+    height: 100dvh; /* corrige em navegadores modernos (Chrome/Edge/Firefox/Safari novos) */
+    height: -webkit-fill-available; /* corrige em alguns iOS antigos */
+
     background-image: url('/Portfolio/images/pixobg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1; /* garante que fique atrás do conteúdo */
+    z-index: -1;
 }
 
 

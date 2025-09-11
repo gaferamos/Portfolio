@@ -1,43 +1,43 @@
 [
   {
-    "Title": "Portfólio WebAssembly",
-    "CardResume": "Projeto de portfólio criado para praticar tecnologias modernas e apresentar meus outros trabalhos de forma dinâmica e acessível",
-    "CardFullInfo": "Aplicação em Blazor WebAssembly usando C# que consome dados JSON para renderizar dinamicamente cartões de projetos. Implementa componentes Razor com interatividade via Bootstrap, carregamento assíncrono via HttpClient e gerenciamento de estado para exibir detalhes expandidos. Arquitetura modular que facilita manutenção e expansão.",
+    "Title": "Finance",
+    "CardResume": "Aplicação web em Flask para simular a compra e venda de ações, com registro de usuários, consulta a cotações em tempo real e gerenciamento de portfólio.",
+    "CardFullInfo": "O projeto consistiu no desenvolvimento de uma aplicação web utilizando Python e o framework Flask para backend, com HTML, CSS e JavaScript no front-end, permitindo criar interfaces interativas para os usuários. A aplicação simula operações de compra e venda de ações, registrando transações e mantendo o saldo do usuário atualizado. As cotações de ações são obtidas em tempo real através da API IEX, garantindo dados atualizados para a simulação. O armazenamento de informações, incluindo usuários, histórico de transações e portfólios, foi realizado em banco de dados SQLite. A atividade proporcionou experiência prática em desenvolvimento web full-stack, integração com APIs externas, manipulação de banco de dados, controle de estado de aplicações e implementação de funcionalidades de autenticação e segurança.",
     "MinInfo": "Criado Por: Gabriel",
     "RepoLink": "https://github.com/gaferamos/Portfolio#",
-    "ImgSrc": "images/cutepc.jpg"
+    "ImgSrc": "images/aqua.jpg"
   },
   {
-    "Title": "Portfólio WebAssembly",
-    "CardResume": "Projeto de portfólio criado para praticar tecnologias modernas e apresentar meus outros trabalhos de forma dinâmica e acessível",
-    "CardFullInfo": "Aplicação em Blazor WebAssembly usando C# que consome dados JSON para renderizar dinamicamente cartões de projetos. Implementa componentes Razor com interatividade via Bootstrap, carregamento assíncrono via HttpClient e gerenciamento de estado para exibir detalhes expandidos. Arquitetura modular que facilita manutenção e expansão.",
+    "Title": "Herança",
+    "CardResume": "Simulação de herança genética de tipos sanguíneos em C, utilizando estruturas e alocação dinâmica de memória para modelar a transmissão de alelos entre gerações.",
+    "CardFullInfo": "O projeto consiste na implementação de um programa em C para simular a herança de tipos sanguíneos ao longo de gerações familiares. Para isso, foram utilizadas estruturas de dados para representar indivíduos e suas relações de parentesco, e alocação dinâmica de memória para criar uma árvore genealógica que acompanha a transmissão de alelos dos pais para os filhos.",
     "MinInfo": "Criado Por: Gabriel",
-    "RepoLink": "https://github.com/gaferamos/Portfolio#",
-    "ImgSrc": "images/cutepc.jpg"
+    "RepoLink": "https://github.com/gaferamos/cs50-problem-sets/tree/main/inheritance",
+    "ImgSrc": "images/aqua.jpg"
   },
   {
-    "Title": "Portfólio WebAssembly",
-    "CardResume": "Projeto de portfólio criado para praticar tecnologias modernas e apresentar meus outros trabalhos de forma dinâmica e acessível",
-    "CardFullInfo": "Aplicação em Blazor WebAssembly usando C# que consome dados JSON para renderizar dinamicamente cartões de projetos. Implementa componentes Razor com interatividade via Bootstrap, carregamento assíncrono via HttpClient e gerenciamento de estado para exibir detalhes expandidos. Arquitetura modular que facilita manutenção e expansão.",
+    "Title": "Recover",
+    "CardResume": "Desenvolvido como parte do curso CS50 (Harvard), este programa em C foi criado para recuperar arquivos JPEG de uma imagem forense bruta.",
+    "CardFullInfo": "O programa lê blocos de 512 bytes da mídia de entrada, identifica os cabeçalhos de arquivos JPEG e salva cada imagem recuperada em arquivos separados. O projeto permite explorar conceitos como manipulação de arquivos binários, uso de tipos de dados fixos (uint8_t) e lógica de segmentação de dados, sendo uma excelente prática para aprendizado de estrutura de programas e processamento de dados em baixo nível.",
     "MinInfo": "Criado Por: Gabriel",
-    "RepoLink": "https://github.com/gaferamos/Portfolio#",
-    "ImgSrc": "images/cutepc.jpg"
+    "RepoLink": "https://github.com/gaferamos/cs50-problem-sets/tree/main/recover",
+    "ImgSrc": "images/aqua.jpg"
   },
   {
-    "Title": "Portfólio WebAssembly",
-    "CardResume": "Projeto de portfólio criado para praticar tecnologias modernas e apresentar meus outros trabalhos de forma dinâmica e acessível",
-    "CardFullInfo": "Aplicação em Blazor WebAssembly usando C# que consome dados JSON para renderizar dinamicamente cartões de projetos. Implementa componentes Razor com interatividade via Bootstrap, carregamento assíncrono via HttpClient e gerenciamento de estado para exibir detalhes expandidos. Arquitetura modular que facilita manutenção e expansão.",
+    "Title": "Clear Directory",
+    "CardResume": "Aplicativo em C# desenvolvido para automatizar a limpeza de pastas específicas, definidas em um arquivo de configuração, permitindo excluir arquivos desnecessários de forma programada e eficiente.",
+    "CardFullInfo": "Com o objetivo de automatizar a limpeza de arquivos em pastas específicas, configuradas pelo usuário por meio de um arquivo XML. Ele foi projetado para ser utilizado em conjunto com cron jobs no WSL2 (Linux) / task scheduler (Windows), permitindo a execução automatizada de tarefas de manutenção de diretórios.",
     "MinInfo": "Criado Por: Gabriel",
-    "RepoLink": "https://github.com/gaferamos/Portfolio#",
-    "ImgSrc": "images/cutepc.jpg"
+    "RepoLink": "https://github.com/gaferamos/Clear-Directory---Task-Scheduler/tree/linux-version",
+    "ImgSrc": "images/aqua.jpg"
   },
   {
-    "Title": "Portfólio WebAssembly",
-    "CardResume": "Projeto de portfólio criado para praticar tecnologias modernas e apresentar meus outros trabalhos de forma dinâmica e acessível",
-    "CardFullInfo": "Aplicação em Blazor WebAssembly usando C# que consome dados JSON para renderizar dinamicamente cartões de projetos. Implementa componentes Razor com interatividade via Bootstrap, carregamento assíncrono via HttpClient e gerenciamento de estado para exibir detalhes expandidos. Arquitetura modular que facilita manutenção e expansão.",
+    "Title": "Console Timer",
+    "CardResume": "Aplicação de timer em C# para console, projetado para auxiliar na gestão de tempo de forma eficiente, com funcionalidades inspiradas na técnica Pomodoro.",
+    "CardFullInfo": "Desenvolvido para explorar a estruturação de programas, a manipulação de dados e a integração de bibliotecas externas, este programa consiste em um timer em console baseado no método Pomodoro, que permite ao usuário definir o tempo tanto por meio de uma interface quanto por argumentos na inicialização.",
     "MinInfo": "Criado Por: Gabriel",
     "RepoLink": "https://github.com/gaferamos/Portfolio#",
-    "ImgSrc": "images/cutepc.jpg"
+    "ImgSrc": "images/aqua.jpg"
   }
 
 ]
