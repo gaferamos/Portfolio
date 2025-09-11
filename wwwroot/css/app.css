@@ -18,6 +18,12 @@ body {
     overflow-y: auto;
 }
 
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll !important;
+    }
+}
+
 
 
 h1:focus {
