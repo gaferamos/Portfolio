@@ -4,7 +4,7 @@
 
 
 <div class="generalinfo">
-    <div class="presentation">
+  @*   <div class="presentation">
         <p>
             <button class="btn btn-dark btnpresentatio" type="button" data-bs-toggle="collapse"
                     data-bs-target="#gafeinfo" aria-expanded="false" aria-controls="collapseWidthExample">
@@ -20,14 +20,16 @@
                 </div>
             </div>
         </div>
+    </div> *@
+    <div class="typewriter-container">
+        <h3>@displayedText<span class="cursor">|</span></h3>
     </div>
-
 
     <div class="div-a">
         <img src="images/asdaf.jpg" alt="imaage of me" class="imageofme">
     </div>
 
-    <div class="div-a">
+   @*  <div class="div-a">
         <a href="https://github.com/gaferamos" target="_blank" class="btn btn-outline-dark">
             Github
         </a>
@@ -39,7 +41,7 @@
     </div>
     <a href="mailto:gafe.dev@gmail.com?subject=Ola&body=Gabriel,%20podemos%20conversar%20sobre" target="_blank" class="btn btn-outline-dark">
         Enviar Mensagem
-    </a>
+    </a> *@
 </div>
 
 <div class="cardinfo">
@@ -50,7 +52,7 @@
             <h5 class="card-title">Projetos de Estudo</h5>
 
             <p class="card-text">@ProjectCardInfo</p>
-            <a href="/Portfolio/studyprojects" class="btn btn-dark mt-auto">Explorar</a>
+            <a href="/studyprojects" class="btn btn-dark mt-auto">Explorar</a>
         </div>
     </div>
 
@@ -60,7 +62,7 @@
             <h5 class="card-title">Projetos Pessoais</h5>
 
             <p class="card-text">@Personalprjcardinfo</p>
-            <a href="/Portfolio/personalprojects" class="btn btn-dark mt-auto">Explorar</a>
+            <a href="/personalprojects" class="btn btn-dark mt-auto">Explorar</a>
         </div>
     </div>
 
@@ -70,7 +72,7 @@
             <h5 class="card-title">Projetos Em Grupo</h5>
 
             <p class="card-text">@Groupprjrcardinfo</p>
-            <a href="/Portfolio/groupprojects" class="btn btn-dark mt-auto">Explorar</a>
+            <a href="/groupprojects" class="btn btn-dark mt-auto">Explorar</a>
         </div>
     </div>
 
@@ -82,4 +84,19 @@
     private string Personalprjcardinfo = "Projetos pessoais desenvolvidos para transformar ideias em código e compartilhá-las com o mundo.";
 
     private string Groupprjrcardinfo = "Projetos colaborativos desenvolvidos para alcançar grandes resultados juntos.";
+
+    private string fullText = "Olá, sou o Gabriel.\nSou estudante de Ciências da Computação.\nAqui te apresento um pouco sobre mim e meus projetos";
+    private string displayedText = "";
+    private int index = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        while (index < fullText.Length)
+        {
+            displayedText += fullText[index];
+            index++;
+            StateHasChanged();
+            await Task.Delay(100); // velocidade de digitação (100ms por letra)
+        }
+    }
 }

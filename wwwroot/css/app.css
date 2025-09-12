@@ -28,7 +28,7 @@ body {
     height: 100dvh; /* corrige em navegadores modernos (Chrome/Edge/Firefox/Safari novos) */
     height: -webkit-fill-available; /* corrige em alguns iOS antigos */
 
-    background-image: url('/Portfolio/images/pixobg.jpg');
+    background-image: url('/images/predio.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

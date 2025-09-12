@@ -15,10 +15,26 @@
 .btn-outline-dark {
     min-width: 90px;
 }
+.cursor {
+    display: inline-block;
+    width: 8px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+.typewriter-container {
+    flex: 1;                 /* ocupa espaço dentro do flex */
+    white-space: pre-line;   /* respeita \n no texto */
+    word-wrap: break-word;   /* quebra palavras longas */
+}
 
 .generalinfo {
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     /* empilha os elementos verticalmente */
     align-items: center;
     /* centraliza horizontalmente */
@@ -26,10 +42,12 @@
     /* centraliza verticalmente dentro do container */
     text-align: center;
     /* centraliza textos internos */
-    gap: 15%;
+    gap: 25%;
     /* espaçamento entre os elementos */
     margin: 1.5% auto;
     margin-top: 40px;
+    margin-bottom:100px;
+    padding: 80px;
 }
 
 .cardinfo {
