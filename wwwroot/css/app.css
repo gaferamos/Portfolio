@@ -3,20 +3,10 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/*body {
-    background-image: url('/Portfolio/images/pixobg.jpg');
-    background-size: cover;*/
-    /* cobre toda a tela */
-    /*background-position: center;
-    background-attachment: fixed;*/
-    /* centraliza a imagem */
-    /*background-repeat: no-repeat;*/
-    /* não repete a imagem */
-    /*height: 100vh;*/
-    /* garante altura total da tela */
-    /*margin: 0;
-    overflow-y: auto;
-}*/
+body {
+   margin: 0px;
+   padding: 0px;
+}
 
 .bg {
     position: fixed;
@@ -33,6 +23,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
+    margin: 0px;
+    padding: 0px;
 }
 
 
@@ -61,7 +53,9 @@ a,
 }
 
 .content {
-    padding-top: 1.1rem;
+    padding-top:0;
+    padding-left:0;
+    padding-right:0;
 }
 
 .valid.modified:not([type=checkbox]) {

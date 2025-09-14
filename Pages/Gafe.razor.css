@@ -2,6 +2,7 @@
     .cardinfo {
         display: flex;
         flex-direction: column !important;
+        height: 0%!important;
     }
 
         .cardinfo .card {
@@ -10,15 +11,42 @@
             max-width: 350px;
             /* limite pra não esticar demais */
         }
-}
+    .generalinfo {
+        display: flex;
+        flex-direction: column-reverse !important;
+        height: 100%;
+    }
 
+    .imageofme {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .fhjsdk {
+        margin-right: 0 !important;
+        margin-bottom: 60px;
+        max-width: 350px;
+    }
+
+}
+.fhjsdk {
+    
+    width: 500px;
+    height: 600px;
+    margin-right: 20px;
+   
+    border: dashed;
+    padding-bottom: 100px;
+    border-radius: 2%;
+    border-color: antiquewhite;
+}
 .btn-outline-dark {
     min-width: 90px;
 }
 .cursor {
     display: inline-block;
     width: 8px;
-    animation: blink 1s infinite;
+    animation: blink 1s infinite ;
 }
 
 @keyframes blink {
@@ -27,35 +55,103 @@
     }
 }
 .typewriter-container {
-    flex: 1;                 /* ocupa espaço dentro do flex */
-    white-space: pre-line;   /* respeita \n no texto */
-    word-wrap: break-word;   /* quebra palavras longas */
+    flex: 1;
+    flex-direction: column;
+    white-space: pre-line;
+    word-wrap: break-word;
+    display: flex;
+    width: 100%; /* ocupa toda a largura da tela */
+    height: 100%; /* ocupa toda a altura da div pai */
+    text-align: left;
+    padding: 0 20px; /* margem interna opcional */
+    box-sizing: border-box;
+}
+.typewriter-text {
+    position: relative; /* não absoluto, para não criar espaço extra */
+    text-align: left;
+    white-space: pre-line;
+    width: 100%; /* ocupa toda a largura da container */
 }
 
+/* seta no rodapé da seção */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: rgb(185, 185, 185);
+    text-decoration: none;
+    animation: bounce 1.5s infinite;
+}
+
+    .scroll-down:hover {
+        color: #ffffff; /* muda cor no hover */
+    }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 8px);
+    }
+}
+
+html {
+    scroll-behavior: smooth; /* rolagem suave */
+}
+html, body {
+    margin: 0!important;
+    padding: 0!important;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* remove scroll horizontal */
+}
 .generalinfo {
     display: flex;
-    flex-direction:row;
-    /* empilha os elementos verticalmente */
-    align-items: center;
-    /* centraliza horizontalmente */
+    flex-direction:row-reverse;
     justify-content: center;
-    /* centraliza verticalmente dentro do container */
-    text-align: center;
-    /* centraliza textos internos */
-    gap: 25%;
-    /* espaçamento entre os elementos */
-    margin: 1.5% auto;
-    margin-top: 40px;
-    margin-bottom:100px;
-    padding: 80px;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(33, 34, 36);
+    box-sizing: border-box;
+    position: relative; /* necessário para elementos absolutos internos */
+    
+    color:antiquewhite;
 }
+.noise {
+    position: relative; /* referência para o ::before */
+}
+
+    .noise::before {
+        content: "";
+        position: absolute; /* ocupa só a div pai */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("images/noise.gif");
+        opacity: 0.07; /* transparência */
+        z-index: 1; /* acima do fundo */
+        pointer-events: none; /* não atrapalha clique */
+    }
+
+
+/*rgb(38, 39, 39, 0.90);*/
+
 
 .cardinfo {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 100vh;
+    width: 100%;
     justify-content: center;
     gap: 1%;
+    background-color: rgba(38, 39, 39, 0.90)
 }
 
 .card-img-top {
@@ -66,14 +162,28 @@
 }
 
 .imageofme {
-    /* gira 90 graus */
-    width: 200px;
-    /* largura (resolução na tela) */
-    height: 200px;
-    /* ajusta altura automaticamente */
-    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    border-radius: 2%;
     object-fit: cover;
+    opacity: 0;
+    transform: translateX(+50px);
+    transform: translateY(+50px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
+
+    .imageofme.visible {
+        opacity: 1;
+        transform: translateX(0);
+        transform: translateY(0px);
+    }
+
+    .imageofme.hidden {
+        opacity: 0;
+        transform: translateX(-50px);
+        transform: translateY(-50px);
+    }
+
 
 .card {
     margin-bottom: 10px;
@@ -81,21 +191,21 @@
 }
 
 .card1 {
-    background-color: rgb(185, 185, 185);
+    background-color: rgb(112, 114, 118);
     min-height: 400px;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     /* sempre aplicar */
 }
 
 .card2 {
-    background-color: rgb(138, 68, 68);
+    background-color: rgb(112, 114, 118);
     min-height: 400px;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     /* sempre aplicar */
 }
 
 .card3 {
-    background-color: rgb(67, 148, 151);
+    background-color: rgb(112, 114, 118);
     min-height: 400px;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     /* sempre aplicar */
@@ -139,3 +249,4 @@
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+

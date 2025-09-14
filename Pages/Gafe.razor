@@ -1,9 +1,10 @@
 ﻿@page "/"
 
 <PageTitle>Home</PageTitle>
+@inject IJSRuntime JS
 
 
-<div class="generalinfo">
+<div class="generalinfo noise">
   @*   <div class="presentation">
         <p>
             <button class="btn btn-dark btnpresentatio" type="button" data-bs-toggle="collapse"
@@ -21,13 +22,31 @@
             </div>
         </div>
     </div> *@
-    <div class="typewriter-container">
-        <h3>@displayedText<span class="cursor">|</span></h3>
-    </div>
+    
+    
+        @* <div class="div-a">
+            <img src="images/a.png" alt="imaage of me" class="imageofme">
+        </div> *@
+    <div class="fhjsdk"></div>
 
-    <div class="div-a">
-        <img src="images/asdaf.jpg" alt="imaage of me" class="imageofme">
-    </div>
+        <div class="typewriter-container">
+            <h1 class="typewriter-text">@displayedText<span class="cursor">@cusorChar</span></h1>
+
+            <div>
+                <h6 class="typewriter-text">@displayedText2<span class="cursor">@cusorChar2</span></h6>
+            </div>
+       
+
+            <a href="#cards" class="scroll-down">
+                <i class="bi bi-chevron-down"></i>
+            </a>
+
+        </div>
+    
+
+   
+
+   
 
    @*  <div class="div-a">
         <a href="https://github.com/gaferamos" target="_blank" class="btn btn-outline-dark">
@@ -44,7 +63,7 @@
     </a> *@
 </div>
 
-<div class="cardinfo">
+<div id="cards" class="cardinfo">
 
     <div class="card card1 " style="width: 18rem;">
         <img src="images/studyprj.jpg" class="card-img-top" alt="...">
@@ -56,7 +75,7 @@
         </div>
     </div>
 
-    <div class="card card2" style="width: 18rem;">
+     <div class="card card2" style="width: 18rem;">
         <img src="images/personalprj.jpg" class="card-img-top" alt="...">
         <div class="card-body card-body d-flex flex-column">
             <h5 class="card-title">Projetos Pessoais</h5>
@@ -74,7 +93,7 @@
             <p class="card-text">@Groupprjrcardinfo</p>
             <a href="/groupprojects" class="btn btn-dark mt-auto">Explorar</a>
         </div>
-    </div>
+    </div> 
 
 </div>
 
@@ -85,18 +104,42 @@
 
     private string Groupprjrcardinfo = "Projetos colaborativos desenvolvidos para alcançar grandes resultados juntos.";
 
-    private string fullText = "Olá, sou o Gabriel.\nSou estudante de Ciências da Computação.\nAqui te apresento um pouco sobre mim e meus projetos";
+    private string fullText = "Olá, eu sou o Gabriel\n Bem Vindo";
     private string displayedText = "";
     private int index = 0;
+    private string cusorChar = "|";
+
+    private string fullText2 = "Olá, sou o Gabriel.\nSou estudante de Ciências da Computação.\nAqui te apresento um pouco sobre mim e meus projetos";
+    private string displayedText2 = "";
+    private int index2 = 0;
+    private string cusorChar2 = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
+        
         while (index < fullText.Length)
         {
             displayedText += fullText[index];
             index++;
             StateHasChanged();
             await Task.Delay(100); // velocidade de digitação (100ms por letra)
+        }
+        cusorChar = string.Empty;
+        cusorChar2 = "|";
+        while (index2 < fullText2.Length)
+        {
+            displayedText2 += fullText2[index2];
+            index2++;
+            StateHasChanged();
+            await Task.Delay(50); // velocidade de digitação (100ms por letra)
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("imageFadeInit");
         }
     }
 }
