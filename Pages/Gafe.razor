@@ -107,9 +107,9 @@
     private string fullText = "Olá, eu sou o Gabriel\n Bem Vindo";
     private string displayedText = "";
     private int index = 0;
-    private string cusorChar = "|";
+    private string cusorChar = "_";
 
-    private string fullText2 = "Olá, sou o Gabriel.\nSou estudante de Ciências da Computação.\nAqui te apresento um pouco sobre mim e meus projetos";
+    private string fullText2 = "Olá, sou o Gabriel.\nSou estudante de Ciências da Computação.\nAqui te apresento um pouco sobre mim e meus projetos\n>";
     private string displayedText2 = "";
     private int index2 = 0;
     private string cusorChar2 = string.Empty;
@@ -125,7 +125,7 @@
             await Task.Delay(100); // velocidade de digitação (100ms por letra)
         }
         cusorChar = string.Empty;
-        cusorChar2 = "|";
+        cusorChar2 = "_";
         while (index2 < fullText2.Length)
         {
             displayedText2 += fullText2[index2];

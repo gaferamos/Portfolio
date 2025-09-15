@@ -1,59 +1,68 @@
-/* Faz a barra lateral ocupar a altura inteira */
-.navbar {
-    background-color: transparent !important;
-    /* fundo transparente */
-    border-bottom: none;
-    /* sem borda */
-    box-shadow: none;
-}
-
-.navbar-toggler {
-    background-color: #07070762;
-    
-    border: none;
-    /* sem borda */
-    border-radius: 8px;
-    /* bordas arredondadas */
-    padding: 10px;
-}
-
-.offcanvas {
-    width: 260px;
-    /* largura fixa */
-    background-color: #202123;
-    /* cor do fundo parecida com a sidebar do ChatGPT */
-    color: #fff;
-    /* texto branco */
-    border-right: 1px solid #2f2f2f;
-    border-radius: 20px;
-}
-
-/* Cabeçalho da barra lateral */
-.offcanvas-header {
-    padding: 8px;
-}
-
-/* Título */
-.offcanvas-title {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #ececec;
+.menucontent {
+    position: fixed;
+    top: -100%; /* começa fora da tela (em cima) */
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+    color: black;
+    transition: top 0.6s ease-in-out; /* animação suave */
+    z-index: 1000;
+    align-content: center;
     justify-content: center;
     text-align: center;
-    /* Centraliza o texto dentro do elemento */
-    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-/* Links principais */
-.offcanvas-body .nav-link {
-    color: #b0b0b0;
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    transition: background 0.2s, color 0.2s;
+/* quando ativo */
+.menucontent.open {
+    top: 0; /* desce e cobre toda a tela */
 }
 
-    /* Hover dos links */
-    .offcanvas-body .nav-link:hover {
-        background-color: #2a2b32;
-        color: #fff;
-    }
+.menu a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.menu ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: aquamarine;
+    width: 100px;
+    height: 100px;
+    right: 20px;
+    top: 20px;
+    position: fixed;
+    z-index: 1100; /* acima do menu */
+    cursor: pointer;
+}
+
+.centerinfo {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Barracuda';
+    font-size: 150px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navlist ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem; /* espaço entre os itens */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.navlist li {
+    display: inline-block; /* garante comportamento em linha */
+}
