@@ -1,68 +1,194 @@
-.menucontent {
-    position: fixed;
-    top: -100%; /* começa fora da tela (em cima) */
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: antiquewhite;
-    color: black;
-    transition: top 0.6s ease-in-out; /* animação suave */
-    z-index: 1000;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
-}
 
-/* quando ativo */
-.menucontent.open {
-    top: 0; /* desce e cobre toda a tela */
-}
+@media (max-width: 768px) {
+    .container.buton .menu-text {
+      
+        font-size: 12px!important    ;
+       
+    }
+    container.buton .line {
 
-.menu a {
-    color: inherit;
-    text-decoration: none;
+        width: 10px!important;
+        height: 2px!important;
+       
+    }
+    .navlist ul {
+        display: flex;
+        flex-direction: column!important;
+        gap: 2rem!important; /* espaço entre os itens */
+       
+    }
+    .bottoninfo ul {
+        gap: 15px!important;
+        flex-direction: column!important;
+    }
+    
+
 }
+    .menucontent {
+        position: fixed;
+        top: -100%; /* começa fora da tela (em cima) */
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: antiquewhite;
+        color: black;
+        transition: top 0.6s ease-in-out; /* animação suave */
+        z-index: 1000;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+        /* quando ativo */
+        .menucontent.open {
+            top: 0; /* desce e cobre toda a tela */
+        }
+
+    .menu a {
+        color: inherit;
+        text-decoration: none;
+    }
 
 
-.menu ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
+    .menu ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
 
-.container {
-    background-color: aquamarine;
-    width: 100px;
-    height: 100px;
-    right: 20px;
-    top: 20px;
-    position: fixed;
-    z-index: 1100; /* acima do menu */
-    cursor: pointer;
-}
+    .container.buton {
+        background: transparent; /* tira quadrado verde */
+        width: 20px;
+        height: 25px;
+        right: 5px;
+        top: 10px;
+        position: fixed;
+        z-index: 1100;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 6px;
+    }
 
-.centerinfo {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Barracuda';
-    font-size: 150px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+        /* linhas do hambúrguer */
+        .container.buton .line {
+            display: block;
+            width: 25px;
+            height: 4px;
+            background: gray;
+            border-radius: 1px;
+            transition: all 0.4s ease;
+        }
+
+        /* texto "Menu" */
+        .container.buton .menu-text {
+            position: absolute;
+            right: 45px;
+            top: 0.5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: gray;
+            transform-origin: right;
+            transition: transform 0.6s ease, opacity 0.6s ease;
+        }
+
+            .container.buton .menu-text.hide {
+                
+                transform: rotateX(90deg);
+                opacity: 0;
+            }
+
+        /* animação X */
+        .container.buton.active .line:nth-child(1) {
+            background: black;
+            transform: rotate(50deg) translate(8px, 6px);
+        }
+
+        .container.buton.active .line:nth-child(2) {
+            background: black;
+            transform: rotate(-50deg);
+        }
+
+    .centerinfo {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Barracuda';
+        font-size: 150px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
 .navlist ul {
     display: flex;
     flex-direction: row;
-    gap: 1rem; /* espaço entre os itens */
+    gap: 6rem; /* espaço entre os itens */
     padding: 0;
     margin: 0;
     list-style: none;
     align-content: center;
     justify-content: center;
     text-align: center;
+    position: absolute; /* ou absolute, dependendo do caso */
+    top: 10px !important; /* agora funciona */
+    left: 50%;
+    transform: translateX(-50%); /* centraliza horizontalmente */
 }
 
+
+
 .navlist li {
-    display: inline-block; /* garante comportamento em linha */
+    position: relative;
 }
+
+.navlist a {
+    color: black; /* ou o que você usa */
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 2px 0;
+}
+
+    /* linha animada */
+    .navlist a::after {
+        content: "";
+        position: absolute;
+        bottom: 0; /* embaixo do texto */
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: black;
+        transform: scaleX(0); /* começa escondida */
+        transform-origin: right; /* encolhe vindo da direita */
+        transition: transform 0.3s ease;
+    }
+
+    /* hover: linha aparece da direita pra esquerda */
+    .navlist a:hover::after {
+        transform: scaleX(1);
+        transform-origin: left; /* cresce da esquerda pra direita */
+    }
+
+.bottoninfo ul{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem; /* espaço entre os itens */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute; /* ou absolute, dependendo do caso */
+    bottom: 10px !important; /* agora funciona */
+    left: 50%;
+    transform: translateX(-50%); /* centraliza horizontalmente */
+}
+    .bottoninfo li{
+        position: relative;
+        display: inline-block;
+        gap: 6rem;
+    }

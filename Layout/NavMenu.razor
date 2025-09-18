@@ -1,28 +1,36 @@
 ﻿@inject IJSRuntime JS
 
 <div class="menu">
-    <div class="container buton" @onclick="ToggleInfo" @onclick:preventDefault style="cursor:pointer;"></div>
+    <div class="container buton @(showInfo ? "active" : "")" @onclick="ToggleInfo">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="menu-text @(showInfo ? "hide" : "")">Menu</span>
+    </div>
 
 
     <div class="menucontent @(showInfo ? "open" : "")">
         <div class="navlist">
             <ul>
-                <li><a  href="/">home</a></li>
-                <li><a  href="/personalprojects">projetos pessoais</a></li>
-                <li><a  href="/groupprojects">projetos em grupo</a></li>
-                <li><a  href="/studyprojects">projetos de estudo</a></li>
+                <li><a class="nav-link" @onclick="ToggleInfo" href="/" @onmouseover="SetCenterhome" @onmouseleave="Resetcenter">home</a></li>
+
+
+                <li><a class="nav-link" @onclick="ToggleInfo" href="/personalprojects" @onmouseover="SetCenterpersonal" @onmouseleave="Resetcenter">projetos pessoais</a></li>
+                <li><a class="nav-link" @onclick="ToggleInfo" href="/groupprojects" @onmouseover="SetCentergroup" @onmouseleave="Resetcenter">projetos em grupo</a></li>
+                <li>
+                    <a class="nav-link" @onclick="ToggleInfo" href="/studyprojects" @onmouseover="SetCenterstudy" @onmouseleave="Resetcenter">projetos de estudo</a></li>
                 
             </ul>
         </div>
 
         <div class="centerinfo">
-            <h1>home</h1>
+            <h1>@displayedText</h1>
         </div>
 
         <div class="bottoninfo">
             <ul>
-                <li><a href="javascript:void(0)" @onclick:preventDefault>contato</a></li>
-                <li><a href="javascript:void(0)" @onclick:preventDefault>mail</a></li>
+                <li><a href="others\curriculo Gabriel Felipe Ramos.pdf" target="_blank">meu cv</a></li>
+                <li><a href="" target="_blank">sobre</a></li>
+                <li><a href="mailto:gafe.dev@gmail.com?subject=Ola&body=Gabriel,%20podemos%20conversar%20sobre" target="_blank">mail</a></li>
             </ul>
         </div>
     </div>
@@ -44,5 +52,50 @@
         {
             await JS.InvokeVoidAsync("toggleBodyScroll.remove");
         }
+    }
+    private string CenterText = "";
+    private async void SetCenterhome()
+    {
+        CenterText = "home";
+        await animation();
+    }
+    private async void SetCenterpersonal()
+    {
+        CenterText = "projetos pessoais";
+        await animation();
+    }
+    private async void SetCentergroup()
+    {
+        CenterText = "projetos em grupo";
+        await animation();
+    }
+    private async void SetCenterstudy()
+    {
+        CenterText = "projetos de estudo";
+        await animation();
+    }
+
+    private void Resetcenter()
+    {
+        CenterText = "";
+    }
+
+    private string displayedText = "";
+    private int index = 0;
+
+
+    protected  async Task animation()
+    {
+        index = 0;
+        displayedText = "";
+
+        while (index < CenterText.Length)
+        {
+            displayedText += CenterText[index];
+            index++;
+            StateHasChanged();
+            await Task.Delay(60); // velocidade de digitação (100ms por letra)
+        }
+        
     }
 }

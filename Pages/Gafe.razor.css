@@ -31,6 +31,11 @@
         margin-bottom: 60px;
         max-width: 350px;
     }
+    .typewriter-container{
+        min-height: 100dvh!important; 
+        /* dar uma mudada nessa parte tentar diminuir a distancia entre o retangulo e o texto para pc e mobile*/
+    }
+    
 
 }
 .fhjsdk {
