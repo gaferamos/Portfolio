@@ -27,7 +27,16 @@
         @* <div class="div-a">
             <img src="images/a.png" alt="imaage of me" class="imageofme">
         </div> *@
-    <div class="fhjsdk"></div>
+    <div class="fhjsdk">
+        <div class="tech-text">
+            <h3 class="headtxt">Ferramentas Utilizadas no Desenvolvimento dos Projetos</h3>
+            <ul>
+                <li>C | C#,.NET, Blazor | Pyhton, Flask</li>
+                <li> HTML5 | CSS3| JavaScript</li>
+                <li>SQL | Sqlite</li>
+            </ul>
+        </div>
+    </div>
 
         <div class="typewriter-container">
             <h1 class="typewriter-text">@displayedText<span class="cursor">@cusorChar</span></h1>
@@ -75,8 +84,8 @@
         </div>
     </div>
 
-     <div class="card card2" style="width: 18rem;">
-        <img src="images/personalprj.jpg" class="card-img-top" alt="...">
+    <div class="card card2" style="width: 18rem;">
+       <img src="images/personalprj.jpg" class="card-img-top" alt="...">
         <div class="card-body card-body d-flex flex-column">
             <h5 class="card-title">Projetos Pessoais</h5>
 
@@ -95,6 +104,20 @@
         </div>
     </div> 
 
+  
+
+</div>
+
+<div class="about noise" id="about">
+    <div class="infolist">
+        <ul>
+            <li><a href="https://github.com/gaferamos" title="Github" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/gabriel-felipe-bb21712a7" target="_blank" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="others\curriculo Gabriel Felipe Ramos.pdf" title="Meu CV" target="_blank"><i class="fa-regular fa-file-lines"></i></a></li>
+            <li><a href="mailto:gafe.dev@gmail.com?subject=Ola&body=Gabriel,%20podemos%20conversar%20sobre" title="E-Mail" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
+        </ul>
+    </div>
+
 </div>
 
 @code {
@@ -104,12 +127,12 @@
 
     private string Groupprjrcardinfo = "Projetos colaborativos desenvolvidos para alcançar grandes resultados juntos.";
 
-    private string fullText = "Olá, eu sou o Gabriel\n Bem Vindo";
+    private string fullText = "Bem Vindo";
     private string displayedText = "";
     private int index = 0;
     private string cusorChar = "_";
 
-    private string fullText2 = "Olá, sou o Gabriel.\nSou estudante de Ciências da Computação.\nAqui te apresento um pouco sobre mim e meus projetos\n>";
+    private string fullText2 = "Sou o Gabriel.\nEstudante de Ciências da Computação.\nAqui te apresento um pouco sobre mim e meus projetos\n>";
     private string displayedText2 = "";
     private int index2 = 0;
     private string cusorChar2 = string.Empty;

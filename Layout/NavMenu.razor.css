@@ -28,8 +28,8 @@
         position: fixed;
         top: -100%; /* começa fora da tela (em cima) */
         left: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100dvw;
+        height: 100dvh;
         background-color: antiquewhite;
         color: black;
         transition: top 0.6s ease-in-out; /* animação suave */
@@ -72,6 +72,7 @@
         justify-content: center;
         align-items: flex-end;
         gap: 6px;
+        
     }
 
         /* linhas do hambúrguer */
@@ -192,3 +193,32 @@
         display: inline-block;
         gap: 6rem;
     }
+
+.bottoninfo a {
+    color: black; /* cor do texto */
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 2px 0;
+}
+
+    /* linha */
+    .bottoninfo a::before {
+        content: "";
+        position: absolute;
+        bottom: -2px; /* logo abaixo do texto */
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: black;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+    }
+    /* hover */
+    .bottoninfo a:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    
