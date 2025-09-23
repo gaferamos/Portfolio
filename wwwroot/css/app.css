@@ -29,8 +29,10 @@ body {
     height: 100dvh; /* corrige em navegadores modernos (Chrome/Edge/Firefox/Safari novos) */
     height: -webkit-fill-available; /* corrige em alguns iOS antigos */
 
-    background-image: url('/images/predio.jpg');
+    background-image: url('/Portfolio/images/predio.jpg');
     background-size: cover;
+    background-size: cover;
+    filter: blur(2.4px);
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;

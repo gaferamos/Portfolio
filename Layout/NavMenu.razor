@@ -11,13 +11,14 @@
     <div class="menucontent @(showInfo ? "open" : "")">
         <div class="navlist">
             <ul>
-                <li><a class="nav-link" @onclick="ToggleInfo" href="/" @onmouseover="SetCenterhome" @onmouseleave="Resetcenter">home</a></li>
+                <li><a class="nav-link" @onclick="ToggleInfo" href="/Portfolio/" @onmouseover="SetCenterhome" @onmouseleave="Resetcenter">home</a></li>
 
 
-                <li><a class="nav-link" @onclick="ToggleInfo" href="/personalprojects" @onmouseover="SetCenterpersonal" @onmouseleave="Resetcenter">projetos pessoais</a></li>
-                <li><a class="nav-link" @onclick="ToggleInfo" href="/groupprojects" @onmouseover="SetCentergroup" @onmouseleave="Resetcenter">projetos em grupo</a></li>
+                <li><a class="nav-link" @onclick="ToggleInfo" href="/Portfolio/personalprojects" @onmouseover="SetCenterpersonal" @onmouseleave="Resetcenter">projetos pessoais</a></li>
+                <li><a class="nav-link" @onclick="ToggleInfo" href="/Portfolio/groupprojects" @onmouseover="SetCentergroup" @onmouseleave="Resetcenter">projetos em grupo</a></li>
                 <li>
-                    <a class="nav-link" @onclick="ToggleInfo" href="/studyprojects" @onmouseover="SetCenterstudy" @onmouseleave="Resetcenter">projetos de estudo</a></li>
+                    <a class="nav-link" @onclick="ToggleInfo" href="/Portfolio/studyprojects" @onmouseover="SetCenterstudy" @onmouseleave="Resetcenter">projetos de estudo</a>
+                </li>
                 
             </ul>
         </div>
@@ -28,7 +29,7 @@
 
         <div class="bottoninfo">
             <ul>
-                <li><a href="others\curriculo Gabriel Felipe Ramos.pdf" target="_blank">meu cv</a></li>
+                <li><a href="/Portfolio/others/curriculo Gabriel Felipe Ramos.pdf" target="_blank">meu cv</a></li>
                 <li><a href="#about" @onclick="ToggleInfo">sobre</a></li>
                 <li><a href="mailto:gafe.dev@gmail.com?subject=Ola&body=Gabriel,%20podemos%20conversar%20sobre" target="_blank">mail</a></li>
             </ul>
